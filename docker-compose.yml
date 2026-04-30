@@ -79,7 +79,9 @@ services:
       DEVICEAUTH_MONGO: "mongodb://mongo"
       DEVICEAUTH_SERVER_PRIV_KEY_PATH: "/etc/deviceauth/private.pem"
     volumes:
-      - ./compose/config/mender.pem:/etc/deviceauth/private.pem
+      - type: bind
+        source: ./compose/config/mender.pem
+        target: /etc/deviceauth/private.pem
 
     labels:
       traefik.enable: "true"
