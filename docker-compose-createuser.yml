@@ -1,8 +1,5 @@
 ---
 name: mender-createuser
-include:
-  - path: compose/docker-compose.seaweedfs.yml
-
 services:
   create-user:
     build:
