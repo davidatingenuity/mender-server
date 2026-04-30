@@ -9,7 +9,7 @@ services:
     restart: on-failure:20
     command: useradm create-user --username=${ADMIN_USER} --password=${ADMIN_PASSWORD}
     environment:
-      USERADM_MONGO: mongodb://mongo
+      USERADM_MONGO: mongodb://mender-mongo-1
       USERADM_SERVER_PRIV_KEY_PATH: /etc/useradm/private.pem
     labels:
       traefik.enable: "true"
