@@ -370,8 +370,8 @@ services:
       - ./compose/certs:/etc/traefik/certs:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
-      - 443:443
-      - 80:80
+      - 2443:443
+      - 2080:80
     networks:
       default:
         aliases:
