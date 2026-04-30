@@ -297,7 +297,7 @@ services:
       default:
         aliases: [mender-useradm]
     volumes:
-      - ./compose/config/mender.pem:/etc/useradm/private.pem
+      - ${PWD}/compose/config/mender.pem:/etc/useradm/private.pem
 
   workflows-worker:
     build:
